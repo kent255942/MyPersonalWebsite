@@ -9,22 +9,39 @@
     color: #ffffff;
    }
    header{
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-    gap: 45px;
-    margin-right: 20px;
-    font-size: 17px;
-   }
-   a{
-    color: #ffffff;
-   }
-   a:link{
-    text-decoration: none;
-   }
-   a:hover{
-    color: gray;
-   }
+ display: flex;
+ justify-content: flex-end;
+ align-items: center;
+ gap: 35px;
+ padding: 20px 50px;
+ font-size: 16px;
+}
+
+header a{
+ color: #ffffff;
+ text-decoration: none;
+ position: relative;
+}
+
+header a::after{
+ content: "";
+ position: absolute;
+ width: 0;
+ height: 2px;
+ background: cyan;
+ left: 0;
+ bottom: -6px;
+ transition: 0.3s;
+}
+
+header a:hover::after{
+ width: 100%;
+}
+
+.active{
+ color: cyan;
+ font-weight: 600;
+}
    p{
     font-size: 23px;
    }
@@ -56,7 +73,7 @@
    <h8>|</h8>
    <a href="About Me.html" target="_blank">About</a>
    <h8>|</h8>
-   <h8>Poject</h8>
+   <span class="active">Project</span>
    <h8>|</h8>
    <a href="Contact Me.html" target="_blank">Contact</a>
   </header>
@@ -74,3 +91,4 @@
  </body>
 
 </html>
+
