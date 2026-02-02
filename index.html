@@ -9,22 +9,39 @@
     color: #ffffff;
    }
    header{
-    justify-content: flex-end;
-    display: flex;
-    gap: 45px;
-    font-size: 17px;
-    padding: 10px;
-    margin-right: 20px;
-   }
-   a{
-    color: #ffffff;
-   }
-   a:link{
-    text-decoration: none;
-   }
-   a:hover{
-    color: gray;
-   }
+ display: flex;
+ justify-content: flex-end;
+ align-items: center;
+ gap: 35px;
+ padding: 20px 50px;
+ font-size: 16px;
+}
+
+header a{
+ color: #ffffff;
+ text-decoration: none;
+ position: relative;
+}
+
+header a::after{
+ content: "";
+ position: absolute;
+ width: 0;
+ height: 2px;
+ background: cyan;
+ left: 0;
+ bottom: -6px;
+ transition: 0.3s;
+}
+
+header a:hover::after{
+ width: 100%;
+}
+
+.active{
+ color: cyan;
+ font-weight: 600;
+}
    .intro{
     justify-content: center;
     display: flex;
@@ -60,7 +77,7 @@
  </head>
  <body>
   <header>
-   <h8>Home</h8>
+   <span class="active">Home</span>
    <h8>|</h8>
    <a href="About Me.html" target="_blank">About</a>
    <h8>|</h8>
@@ -80,6 +97,7 @@
  </body>
 
 </html>
+
 
 
 
